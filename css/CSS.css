@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-position: right;
+    background-color: #e69410;
+    color: #FCFFE7;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(255, 255, 255, .1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    border-bottom: 3px solid rgba(80, 80, 80, .2);
+}
+
+.logo {
+    display: flex; /* Atur elemen dalam baris */
+    align-items: center; /* Sejajarkan elemen secara vertikal */
+    color: #d71616;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+}
+
+.logo img {
+    width: 100px; /* Sesuaikan ukuran gambar */
+    height: auto; /* Pertahankan rasio aspek */
+    margin-right: 10px; /* Tambahkan jarak antara logo dan teks */
+}
+
+.navbar a {
+    color: #2E3840;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: .4s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #df0303;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: url(../image/Dokumentasi_2.jpg) no-repeat;
+    background-size: 50%;
+    background-position: right;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700px;
+    line-height: 1.2;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #e69410;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 35px;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #e69410;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.home-content .btn-box {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #e69410;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #FCFFE7;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #FCFFE7;
+    text-decoration: none;
+    font-weight: 60;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #F9DBBB;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem #2B3467;
+    font-size: 1.6rem;
+    color: #1c2142;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.btn-box a:hover {
+    color: #FCFFE7;
+}
+
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #be4e09;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #e69410;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.3s;
+    z-index: 2;
+}
+
+.home-sci a {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #FCFFE7;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #FCFFE7;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: #2B3467;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #FCFFE7;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+span {
+    color: #df0303;
+}
+
+.Catalog {
+    height: 100vh;
+    display: flex; /* Aktifkan Flexbox */
+    align-items: center; /* Vertikal sejajar tengah */
+    justify-content: flex-end; /* Konten berada di sisi kanan */
+    padding: 0 10%; /* Ruang di sisi luar */
+    background: url(../image/Sepatu_3.jpg) no-repeat; /* Gambar latar */
+    background-size: 50%; /* Gambar menempati setengah area */
+    background-position: left; /* Gambar tetap di sisi kiri */
+}
+
+.Catalog-content {
+    max-width: 600px; /* Batasi lebar konten */
+    margin-left: 5%; /* Tambahkan jarak antara teks dan gambar */
+    text-align: left; /* Teks tetap rata kiri */
+}
+
+.Catalog-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.Catalog-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 35px;
+    text-align: right;
+}
+
+.Catalog_2 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: url(../image/SepatU\ 1.jpg) no-repeat;
+    background-size: 50%;
+    background-position: right;
+}
+
+.Catalog_2-content {
+    max-width: 600px; /* Batasi lebar konten */
+}
+
+.Catalog_2-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.Catalog_2-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 35px;
+}
+
+.Product {
+    background: #eb984e;
+    padding-bottom: 5rem;
+}
+
+.Product h2 {
+    margin-bottom: 4rem;
+}
+
+.Product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.Product-container .Product-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem #BAD7E9;
+    overflow: hidden;
+    display: flex;
+}
+
+.Product-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.Product-box:hover img {
+    transform: scale(1.1);
+}
+
+.Product-box .Product-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), #474842);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+.Product-box:hover .Product-layer {
+    transform: translateY(0%);
+}
+
+.Product-layer h4 {
+    font-size: 2rem;
+    color: #f2e23b;
+}
+
+.Product-layer p {
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+    color: #f2e23b;
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: #ffffff;
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn-box2 {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: #eb984e;
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: #F9DBBB;
+    border-radius: .8rem;
+}
+
+.footer-text a i {
+    font-size: 2.4rem;
+    color: #BAD7E9;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
